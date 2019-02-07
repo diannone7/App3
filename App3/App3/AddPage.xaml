@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Pagina in cui sono contenuti i campi da riempire 
+    -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.AddPage">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Priority="0" Order="Secondary" Clicked="ToolbarItem_Save" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20,20,20,20">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Tipo: " Font="Bold"/>
+                <Picker x:Name="tipo" Title="Seleziona tipo  ">
+                    <Picker.Items>
+                        <x:String>Indifferenziata</x:String>
+                        <x:String>Carta</x:String>
+                        <x:String>Plastica</x:String>
+                        <x:String>Alluminio</x:String>
+                        <x:String>Vetro</x:String>
+                        <x:String>Umido</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Colore sacco: " Font="Bold"/>
+                <Picker x:Name="colore" Title="Seleziona colore">
+                    <Picker.Items>
+                        <x:String>Azzurro</x:String>
+                        <x:String>Blu</x:String>
+                        <x:String>Giallo</x:String>
+                        <x:String>Grigio</x:String>
+                        <x:String>Marrone</x:String>
+                        <x:String>Nero</x:String>
+                        <x:String>Verde</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Giorno: " Font="Bold"/>
+                <Picker x:Name="giorno" Title="Seleziona giorno">
+                    <Picker.Items>
+                        <x:String>Lunedì</x:String>
+                        <x:String>Martedì</x:String>
+                        <x:String>Mercoledì</x:String>
+                        <x:String>Giovedì</x:String>
+                        <x:String>Venerdì</x:String>
+                        <x:String>Sabato</x:String>
+                        <x:String>Domenica</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ora: " Font="Bold"/>
+                <TimePicker x:Name="orario"></TimePicker>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
